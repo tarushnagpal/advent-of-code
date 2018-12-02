@@ -13,16 +13,20 @@ for i in ids:
         else:
             counts[x] = 1
 
-    check_3 = True
-    check_2 = True
+    check_3 = False
+    check_2 = False
 
     for i in counts:
-        if(counts[i] == 3 and check_3):
-            total_3 += 1
-            check_3 = False
-        elif(counts[i] == 2 and check_2):
-            total_2 += 1
-            check_2 = False
+        if(counts[i] == 3 and not check_3):
+            check_3 = True
+        elif(counts[i] == 2 and not check_2):
+            check_2 = True
+
+    if(check_3):
+        total_3 += 1
+    if(check_2):
+        total_2 += 1
+
 
 print('Part 1:',total_2*total_3)
 
