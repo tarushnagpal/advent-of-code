@@ -17,6 +17,7 @@ Good Luck!
 Pretty straight forward, We need to take the sum of the frequencies and get our answer, Straight up code in:
 
 ``` total += i ```
+Honestly you can just use sum() here but like can we sometimes not leave things completely to python?
 
 #### Part 2
 In this part all we have to do is keep a track of all the frequencies that we have seen till now and if any repeats then Boom! We get our answer
