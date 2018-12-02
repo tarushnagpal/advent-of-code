@@ -1,4 +1,7 @@
 # advent-of-code
+
+What is Advent of Code? [Advent of Code](https://adventofcode.com/2018/about) is an Advent calendar of small programming puzzles for a variety of skill sets and skill levels that can be solved in any programming language you like. ( Totally not copied from their website ) 
+
 Advent of code in simple readable python! This is not a repo where you can see amazingly optimized well written codes, this is just a repo containing all the solutions for the advent of code 2018 in simple beginner friendly python, If you're someone just starting out with python and are stuck on a question in the AOC, this is the repo for you!
 
 As you will see through this document my markdown skills are still at the lower end of the learning curve, IF you guys see anything you want to change in the code that would make it more efficient (but still keep it beginner friendly) or if you see my markdown being completely weird or unreadable put up a PR!
