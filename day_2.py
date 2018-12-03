@@ -28,7 +28,7 @@ for i in ids:
         total_2 += 1
 
 
-print('Part 1:',total_2*total_3)
+print('Part 1: ' + str(total_2*total_3))
 
 #Part 2
 id_length = len(ids[0])
@@ -52,7 +52,7 @@ for i in range(len(ids)):
                     continue
                 else:
                     final_answer += ids[i][z]
-            print('Part 2:',final_answer)
+            print('Part 2: ' + str(final_answer))
             exit()
 
 
