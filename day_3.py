@@ -48,3 +48,12 @@ for x in locations:
     if(check_unique == total_len):
         print( "Part 2: " + x[x.index('#'):x.index('@')-1] )
 
+# Making Matrix
+f_matrix = open("files/day_3_matrix.txt","w")
+for i in range(1000):
+    for j in range(1000):
+        f_matrix.write( fabric_matrix[i][j] )
+        f_matrix.write(',')
+    f_matrix.write('\n')
+
+        
