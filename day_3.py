@@ -38,15 +38,17 @@ for x in locations:
     len_y = int( x[x.index(':')+1:].split('x')[1] )
     
     total_len = len_x*len_y
-    check_unique = 0
+    check_unique = True
     
     for i in range(len_x):
         for j in range(len_y):
-            if(fabric_matrix[pos_x+i][pos_y+j] == '#' ):
-                check_unique += 1
+            if(fabric_matrix[pos_x+i][pos_y+j] == 'X' ):
+                check_unique = False
+                break
     
-    if(check_unique == total_len):
+    if(check_unique):
         print( "Part 2: " + x[x.index('#'):x.index('@')-1] )
+        break
 
 
         
