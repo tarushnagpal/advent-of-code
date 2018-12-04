@@ -106,3 +106,6 @@ for i in range(len_x):
       check_unique = False
       break
 ```
+
+## Day 4 
+Sorry for being late this time, but I have classes at this hour, and have them tomorrow and day after as well :/ excpect a bit of delay for the next 2 days. Sorry!
