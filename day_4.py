@@ -107,8 +107,9 @@ for guard in guards.keys():
                 all_mins[to_key] = 1    
 
     guard_mins[guard] = all_mins
-    if(max(all_mins.iteritems(),key=operator.itemgetter(1)) > global_max ):
-        global_max = max(all_mins.iteritems(),key=operator.itemgetter(1))
+    
+    if(max(all_mins.iteritems(),key=operator.itemgetter(1))[1] > global_max ):
+        global_max = max(all_mins.iteritems(),key=operator.itemgetter(1))[1]
         best_guard = guard
 
 # print(guard_mins)
@@ -118,3 +119,4 @@ print("\nPart 2:")
 print("Guard id: ",best_guard)
 print("(Minute,Number of Times) = ",global_max)
 
+#179,30
