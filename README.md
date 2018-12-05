@@ -108,4 +108,58 @@ for i in range(len_x):
 ```
 
 ## Day 4 
-Sorry for being late this time, but I have classes at this hour, and have them tomorrow and day after as well :/ excpect a bit of delay for the next 2 days. Sorry!
+Alright, Day 4 is a little trickier than what we have encoutered uptill now,
+
+We are given an input as :
+```
+[1518-11-01 00:00] Guard #10 begins shift
+[1518-11-01 00:05] falls asleep
+[1518-11-01 00:25] wakes up
+[1518-11-01 00:30] falls asleep
+[1518-11-01 00:55] wakes up
+[1518-11-01 23:58] Guard #99 begins shift
+[1518-11-02 00:40] falls asleep
+[1518-11-02 00:50] wakes up
+[1518-11-03 00:05] Guard #10 begins shift
+[1518-11-03 00:24] falls asleep
+[1518-11-03 00:29] wakes up
+[1518-11-04 00:02] Guard #99 begins shift
+[1518-11-04 00:36] falls asleep
+[1518-11-04 00:46] wakes up
+[1518-11-05 00:03] Guard #99 begins shift
+[1518-11-05 00:45] falls asleep
+[1518-11-05 00:55] wakes up
+```
+
+#### Part 1
+And we need to find out which guard is asleep the most at any minute and well find that minute
+Cool so lets divide Part 1 into two
+
+##### Part 1 - Part1(xD) Finding the guard who sleeps the most
+  First we need to sort the inputs according to the date and time (THANK YOU PYTHON)
+  ``` inputs.sort(key=lambda date: datetime.strptime( date[ date.index('[')+1:date.index(']') ] , "%Y-%m-%d %H:%M"))```
+  pretty chill, finds the date and sorts with the key as the date.
+  
+  Now I've made 3 dictionary's here, easier for us to use for part 2 as well.
+  The first,
+  
+  ```
+  guard[id] => total_minutes_he_slept
+  guards_start_times[guard_id] => [all_times_he_has_started_to_sleep]
+  guards_end_times[guard_id] => [all_times_he_has_woken_up]
+  ```
+##### Part 1 - Part2 Finding which minute the guard sleeps the most
+  Now, each index in the list of the two arrays ```[all_times_he_has_started_to_sleep]``` and ```[all_times_he_has_woken_up]``` have matching indeces, the start_time and the coressponding end_time. Now all we do is make a dictionary of all the minutes which point to the number of times the guard has been slept for this specific time. And the maximum value for a (key,value) in this dictionary is the minute!
+
+#### Part 2
+  In this part we need to find which guard has been asleep the most for a any minute in all the time he has been asleep, and find the max from all the guards. 
+  
+  So what we did for part 1 - part 2 for just the best guard we need to do this for every guard. So find start_time, find end_time and apply our ```perdelta``` function for each time interval, find the minute with the most occurences and record that for the guard. Then just find the guard with the most slept through minute. And we have our answer!
+  
+  
+
+
+    
+  
+
+
