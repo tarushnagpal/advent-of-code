@@ -156,10 +156,40 @@ Cool so lets divide Part 1 into two
   
   So what we did for part 1 - part 2 for just the best guard we need to do this for every guard. So find start_time, find end_time and apply our ```perdelta``` function for each time interval, find the minute with the most occurences and record that for the guard. Then just find the guard with the most slept through minute. And we have our answer!
   
-  
+## Day 5
+#### Part 1
+Alright, Pretty easy question. We have a string of the form aAbBcC, if any two consecutive letters are the same letter but just have a change in their Case then we delete them from the list. I used the ord() function for this and just had a:
+
+```
+if( abs(ord(items[i]) - ord(items[i+1])) == 32 ):
+del(items[i])
+del(items[i]) #delete 'i' again because the i+1<sup>th</sup> item is now on the i<sup>th</sup> position 
+change = True #Keeping track of a change if there is no change once going through the string then we break from our loop
+```
+
+Now the length of the list items is the answer for part 1
+
+#### Part 2
+Now we need to just do part 1 and keep a track of the length of the list of items after removing 'a','b','c' uptil 'z'
+
+So we just add 
+```
+for i in range(len(new_items)):
+        try:        
+            if( (ord(new_items[i])==worst_ord) or (ord(new_items[i])+32==worst_ord) ):
+                pass
+            else:
+                items_to_check.append(new_items[i])
+```
+
+```items_to_check``` now contains all the items which do not contain the current letter and then we perform part 1 and store the length of the string
+
+And finally the answer for part 2 is the maximum length we receive after removing specific alphabets from the string.
+
+## Day 6
+_Visualizing using p5.js gonna upload after my classes_
 
 
-    
   
 
 
