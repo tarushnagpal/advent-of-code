@@ -93,5 +93,10 @@ for i in range(len(matrix)):
                 break
         if(total_distance<10000):
             region_size += 1
-
 print(region_size)
+
+ff = open("files/day_6_matrix.txt","w")
+for i in range(len(matrix)):
+    for j in range(len(matrix[0])):
+        ff.write(str(matrix[i][j])+',')
+    ff.write('\n')
