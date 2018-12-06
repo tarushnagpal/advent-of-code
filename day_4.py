@@ -20,6 +20,7 @@ for j in range(len(inputs)):
 
         check_slept = False
         check_woke = False
+        
         while( not i[i.index(']')+ 2] == 'G' ):
             if(not check_slept and i[i.index(']')+ 2] == 'f'):
                 start_time = datetime.strptime( i[ i.index('[')+1:i.index(']') ], "%Y-%m-%d %H:%M") 
